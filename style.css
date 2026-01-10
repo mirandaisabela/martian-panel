@@ -1,0 +1,109 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background */
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  color: #ffffff;
+
+  background-image: url("./assets/mars.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Dark overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.9)
+  );
+  z-index: -1;
+}
+
+/* Main container */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 48px auto;
+  padding: 32px;
+
+  background: rgba(15, 15, 15, 0.65);
+  backdrop-filter: blur(12px);
+
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  color: #ff3b3b;
+  margin-bottom: 32px;
+}
+
+/* Cards grid */
+#dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+/* Weather cards */
+.card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 59, 59, 0.25);
+
+  border-radius: 18px;
+  padding: 20px;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(255, 59, 59, 0.25);
+}
+
+/* Card text */
+.card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ff6b6b;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* Chart container */
+canvas {
+  width: 100% !important;
+  max-height: 380px;
+  background: rgba(255, 255, 255, 0.04);
+
+  border-radius: 20px;
+  padding: 16px;
+}
+
+/* Footer-like subtle text (optional if you add later) */
+.footer {
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.6;
+  margin-top: 24px;
+}
