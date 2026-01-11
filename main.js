@@ -8,7 +8,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-alert("JS is running");
 // NASA InSight API URL
 const API_URL = "https://api.nasa.gov/insight_weather/?api_key=DEMO_KEY&feedtype=json&ver=1.0";
 // Select elements
@@ -45,6 +44,7 @@ function displaySols(sols) {
       <p>Temperature: <span class="${temp === null ? "no-data" : "value"}">${temp !== null && temp !== void 0 ? temp : "No data"}</span> °C</p>
       <p>Pressure: <span class="${pressure === null ? "no-data" : "value"}">${pressure !== null && pressure !== void 0 ? pressure : "No data"}</span> Pa</p>
       <p>Wind: <span class="${wind === null ? "no-data" : "value"}">${wind !== null && wind !== void 0 ? wind : "No data"}</span> m/s</p>
+
     `;
         dashboard.appendChild(card);
     });
